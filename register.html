@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+
+<div class="card">
+<h2>Register</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" placeholder="Password">
+
+<select id="role">
+<option value="restaurant">Restaurant</option>
+<option value="ngo">NGO</option>
+</select>
+
+<button onclick="register()">Register</button>
+<p id="msg"></p>
+
+</div>
+
+<script>
+function register(){
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    users.push({
+        username:username.value,
+        password:password.value,
+        role:role.value
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    msg.innerHTML="✅ Registered Successfully";
+    setTimeout(()=>location="login.html",1000);
+}
+</script>
+
+</body>
+</html>
