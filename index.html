@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+<h1>🍱 Food Wastage System</h1>
+
+<button onclick="goLogin()">Login</button>
+<button onclick="goRegister()">Register</button>
+
+<br><br>
+<button onclick="demo('restaurant')">Demo Restaurant</button>
+<button onclick="demo('ngo')">Demo NGO</button>
+
+</div>
+
+<script>
+// auto redirect
+if(localStorage.getItem("currentUser")){
+    location="dashboard.html";
+}
+
+function goLogin(){ location="login.html"; }
+function goRegister(){ location="register.html"; }
+
+// demo users
+function demo(role){
+    let users = [
+        {username:"rest1", password:"123", role:"restaurant"},
+        {username:"ngo1", password:"123", role:"ngo"}
+    ];
+    localStorage.setItem("users", JSON.stringify(users));
+
+    let user = users.find(u => u.role===role);
+    localStorage.setItem("currentUser", JSON.stringify(user));
+
+    location="dashboard.html";
+}
+</script>
+
+</body>
+</html>
