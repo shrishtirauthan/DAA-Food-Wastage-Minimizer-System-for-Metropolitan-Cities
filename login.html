@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+
+<div class="card">
+<h2>Login</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+<p id="msg"></p>
+
+</div>
+
+<script>
+// auto login
+if(localStorage.getItem("currentUser")){
+    location="dashboard.html";
+}
+
+function login(){
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let user = users.find(u =>
+        u.username===username.value &&
+        u.password===password.value
+    );
+
+    if(user){
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        msg.innerHTML="✅ Login Success";
+        setTimeout(()=>location="dashboard.html",1000);
+    } else {
+        msg.innerHTML="❌ Invalid Login";
+    }
+}
+</script>
+
+</body>
+</html>
