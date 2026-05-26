@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Donation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="card">
+
+        <h2>User Food Donation</h2>
+
+        <p>Donate homemade food for needy people</p>
+
+        <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="name" placeholder="Enter Name">
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="location" placeholder="Enter Location">
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-bowl-food"></i>
+            <input type="text" id="food" placeholder="Food Name">
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-box"></i>
+            <input type="number" id="quantity" placeholder="Food Amount">
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="number" id="freshness" placeholder="Freshness Days">
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-image"></i>
+            <input type="file" id="image">
+        </div>
+
+        <button onclick="donateFood('User')">
+            Donate Food
+        </button>
+
+        <div id="statusMsg"></div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
