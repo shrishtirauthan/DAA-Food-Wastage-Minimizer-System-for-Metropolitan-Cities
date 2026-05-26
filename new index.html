@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Minimizer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i>
+        </div>
+
+        <h1>Food Waste Minimizer</h1>
+
+        <div class="subtitle">
+            Share Food, Save Food, Serve Humanity
+        </div>
+
+        <div class="line">
+            <span></span>
+            <i class="fa-solid fa-seedling"></i>
+            <span></span>
+        </div>
+
+        <div class="card">
+
+            <h2>Join the System</h2>
+
+            <p>Choose your role and start making a difference</p>
+
+            <div class="input-box">
+                <i class="fa-regular fa-user"></i>
+
+                <input type="text" placeholder="Enter Your Name">
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-users"></i>
+
+                <select id="role">
+                    <option value="">Select Your Role</option>
+                    <option value="user">User</option>
+                    <option value="ngo">NGO</option>
+                    <option value="restaurant">Restaurant</option>
+                </select>
+
+            </div>
+
+            <div class="roles">
+
+                <div class="role">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>User</h3>
+                    <p>Receive Food</p>
+                </div>
+
+                <div class="role">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>NGO</h3>
+                    <p>Request Food</p>
+                </div>
+
+                <div class="role">
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Restaurant</h3>
+                    <p>Donate Food</p>
+                </div>
+
+            </div>
+
+            <button onclick="startSystem()">
+                Start Now →
+            </button>
+
+        </div>
+
+        <div class="footer-text">
+            Together, we can reduce waste and feed more lives.
+        </div>
+
+        <div class="bottom">
+
+            <div>
+                <i class="fa-solid fa-leaf"></i>
+                100% Pure Vegetarian
+            </div>
+
+            <div>
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                Share with Care
+            </div>
+
+            <div>
+                <i class="fa-solid fa-earth-asia"></i>
+                Better for People & Planet
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function startSystem() {
+
+            let role = document.getElementById("role").value;
+
+            if (role === "user") {
+                window.location.href = "user.html";
+            }
+
+            else if (role === "ngo") {
+                window.location.href = "ngo.html";
+            }
+
+            else if (role === "restaurant") {
+                window.location.href = "restaurant.html";
+            }
+
+            else {
+                alert("Please select a role");
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
