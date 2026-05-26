@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="card">
+        <h2>NGO Food Request System</h2>
+
+        <div class="input-box">
+            <i class="fa-solid fa-users"></i>
+            <input type="text" id="ngoName" placeholder="NGO Name">
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="ngoLocation" placeholder="NGO Location (City / Area)">
+        </div>
+
+        <button onclick="loadFoods()">Refresh Foods</button>
+    </div>
+
+    <!-- RESULT -->
+    <div id="resultBox"></div>
+
+    <!-- FOOD LIST -->
+    <div id="foodList"></div>
+
+    <!-- MAP -->
+    <div id="map" style="height:400px; margin-top:20px;"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
